@@ -687,10 +687,13 @@ public class ParseObject {
                 T po = (T) clazz.newInstance();
                 po.setData(jsonObject, true);
                 return (T) po;
-            } catch (InstantiationException | IllegalAccessException e) {
+            } catch (InstantiationException e) {
                 e.printStackTrace();
                 return (T) new ParseObject(getClassName());
-            }
+            } catch (IllegalAccessException e) {
+		e.printStackTrace();
+                return (T) new ParseObject(getClassName());
+	    }
         } else {
             ParseObject po = new ParseObject(getClassName());
             po.setData(jsonObject, true);
