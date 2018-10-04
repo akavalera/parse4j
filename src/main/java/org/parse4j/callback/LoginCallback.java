@@ -5,7 +5,7 @@ import org.parse4j.ParseUser;
 
 public class LoginCallback extends ParseCallback<ParseUser> {
 
-	void done(ParseUser parseUser, ParseException parseException);
+	void done(ParseUser parseUser, ParseException parseException) {}
 	
 	@Override
 	void internalDone(ParseUser parseUser, ParseException parseException) {
