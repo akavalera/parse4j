@@ -614,7 +614,7 @@ public class ParseObject {
 				exception = e;
 			}
 			if (mDeleteCallback != null) {
-				mDeleteCallback.done(exception);
+				mDeleteCallback.done(null, exception);
 			}
 		}
 	}
@@ -634,7 +634,7 @@ public class ParseObject {
 				exception = e;
 			}
 			if (mSaveCallback != null) {
-				mSaveCallback.done(exception);
+				mSaveCallback.done(null, exception);
 			}
 		}
 	}
@@ -674,7 +674,7 @@ public class ParseObject {
 		}
 		
 		if (callback != null) {
-			callback.done(object, exception);
+			callback.done(null, exception);
 		}
 		
 	}

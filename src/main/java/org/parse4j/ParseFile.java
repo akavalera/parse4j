@@ -268,7 +268,7 @@ public class ParseFile {
 				exception = e;
 			}
 			if (saveCallback != null) {
-				saveCallback.done(exception);
+				saveCallback.done(null,exception);
 			}
 		}
 	}

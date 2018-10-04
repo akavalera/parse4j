@@ -2,13 +2,9 @@ package org.parse4j.callback;
 
 import org.parse4j.ParseException;
 
-public abstract class SendCallback extends ParseCallback<Void> {
-	
-	abstract void done(ParseException parseException);
-	
+public interface SendCallback extends ParseCallback<Void> {
+
 	@Override
-	void internalDone(Void paramT, ParseException parseException) {
-		done(parseException);
-	}
+	void done(Void paramT, ParseException parseException);
 
 }

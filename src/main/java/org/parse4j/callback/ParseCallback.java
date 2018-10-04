@@ -2,8 +2,8 @@ package org.parse4j.callback;
 
 import org.parse4j.ParseException;
 
-public interfcae ParseCallback<T> {
+public interface ParseCallback<T> {
 	
-	public void internalDone(T paramT, ParseException parseException);
+	void done(T paramT, ParseException parseException);
 	
 }

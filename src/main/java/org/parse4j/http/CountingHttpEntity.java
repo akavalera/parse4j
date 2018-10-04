@@ -53,7 +53,7 @@ public class CountingHttpEntity extends HttpEntityWrapper {
         
         private void notifyCallback() {
         	int progressToReport = Math.round((float)this.transferred / (float)this.totalSize * 100.0F);
-        	this.progressCallback.done(progressToReport);
+        	this.progressCallback.done(progressToReport, null);
         }
 
     }

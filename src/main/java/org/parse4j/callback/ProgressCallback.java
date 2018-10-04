@@ -2,13 +2,9 @@ package org.parse4j.callback;
 
 import org.parse4j.ParseException;
 
-public abstract class ProgressCallback extends ParseCallback<Integer> {
-	
-	public abstract void done(Integer percentDone);
+public interface ProgressCallback extends ParseCallback<Integer> {
 	
 	@Override
-	void internalDone(Integer paramT, ParseException parseException) {
-		done(paramT);
-	}
+	void done(Integer paramT, ParseException parseException);
 
 }
